@@ -1,0 +1,50 @@
+# =============================================================================
+# Python Dependencies for DEMATEL-ISM Integration Analysis
+# =============================================================================
+#
+# This file enumerates the third-party packages required to execute the
+# analytical pipeline described in the accompanying README. All modules
+# have been developed and tested under Python 3.9+. Install the listed
+# packages by running:
+#
+#     pip install -r requirements.txt
+#
+# Standard-library modules used across the codebase (re, pathlib, sys,
+# time, datetime, collections, textwrap) need no separate installation.
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# Numerical and data-handling libraries
+# ---------------------------------------------------------------------------
+
+# pandas: Tabular data structures for constructing and manipulating the
+#          Direct Relation Matrix, Total Relation Matrix, reachability
+#          matrices and all intermediate analytical tables. Also handles
+#          reading the source survey spreadsheet and writing output
+#          workbooks.
+pandas>=1.5.0
+
+# numpy:  Array-level linear algebra operations underpinning the DEMATEL
+#          normalisation, matrix inversion (TRM computation), Boolean
+#          matrix powers (transitivity check) and entropy calculations.
+numpy>=1.23.0
+
+# ---------------------------------------------------------------------------
+# Spreadsheet input/output
+# ---------------------------------------------------------------------------
+
+# openpyxl: Read/write engine for modern Excel workbooks (.xlsx format).
+#           Required by pandas when calling read_excel() or to_excel()
+#           with the default engine on .xlsx files.
+openpyxl>=3.0.0
+
+# ---------------------------------------------------------------------------
+# Visualisation
+# ---------------------------------------------------------------------------
+
+# matplotlib: Plotting back-end used to produce the DEMATEL cause-effect
+#             bubble chart (Module 6), the ISM hierarchical digraph
+#             (Module 12) and the MICMAC driving-dependence scatter plot
+#             (Module 13). All figures are rendered at 300 dpi with
+#             colorblind-safe palettes following the Okabe-Ito convention.
+matplotlib>=3.6.0
